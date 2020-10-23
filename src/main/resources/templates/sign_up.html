@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up | Cli Management</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="css/customize.css">
+</head>
+<body>
+
+    <div class="ui grid container">
+        <div class="three column row">
+            <div class="column"></div>
+            <div class="column">
+                <form class="ui form lgn" th:action="@{/submission}" method="post" th:object="${info}">
+                    <h4 class="ui dividing header">Shipping Information</h4>
+                    <div class="field">
+                        <label>Name</label>
+                        <div class="two fields">
+                            <div class="field">
+                                <input type="text" name="fullName" placeholder="Full name">
+                            </div>
+                            <div class="field">
+                                <input type="text" name="uname" placeholder="Username">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>Password</label>
+                        <div class="fields">
+                            <input type="password" name="pass" placeholder="New Password">
+                        </div>
+                    </div>
+                    
+                    </br>
+                    <a href="index">Already have an account</a>
+                    </br>
+                    <button class="ui green button" tabindex="0"><i class="sign-in alternate icon"></i> Submit Order</button>
+                </form>
+            </div>
+            <div class="column"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+
+</body>
+</html>
